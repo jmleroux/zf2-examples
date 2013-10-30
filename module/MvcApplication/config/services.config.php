@@ -7,15 +7,12 @@
  * @license   http://framework.zend.com/license/new-bsd New BSD License
  */
 
-namespace Application\Controller;
-
-use Zend\Mvc\Controller\AbstractActionController;
-use Zend\View\Model\ViewModel;
-
-class IndexController extends AbstractActionController
-{
-    public function indexAction()
-    {
-        return new ViewModel();
-    }
-}
+return array(
+    'abstract_factories' => array(
+        'Zend\Cache\Service\StorageCacheAbstractServiceFactory',
+        'Zend\Log\LoggerAbstractServiceFactory',
+    ),
+    'aliases' => array(
+        'translator' => 'MvcTranslator',
+    ),
+);
