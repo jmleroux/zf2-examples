@@ -24,4 +24,12 @@ class IndexControllerTest extends AbstractHttpControllerTestCase
         $this->assertControllerClass('IndexController');
         $this->assertMatchedRouteName('home');
     }
+
+    public function testIndexActionResponse()
+    {
+        $this->dispatch('/');
+        $response = $this->getResponse();
+        $this->assertContains('<h1>Welcome to <span class="zf-green">Zend Framework 2</span></h1>', $response->getContent());
+        $this->assertNotContains('unknown text', $response->getContent());
+    }
 }
