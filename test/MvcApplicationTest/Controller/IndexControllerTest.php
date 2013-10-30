@@ -8,6 +8,7 @@ class IndexControllerTest extends AbstractHttpControllerTestCase
 {
     public function setUp()
     {
+        /** @noinspection PhpIncludeInspection */
         $this->setApplicationConfig(
             include 'config/application.config.php'
         );
