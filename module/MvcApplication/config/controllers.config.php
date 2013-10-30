@@ -9,6 +9,7 @@
 
 return array(
     'invokables' => array(
-        'MvcApplication\Controller\Index' => 'MvcApplication\Controller\IndexController'
+        'MvcApplication\Controller\Index' => 'MvcApplication\Controller\IndexController',
+        'MvcApplication\Controller\Foo' => 'MvcApplication\Controller\FooController',
     ),
 );

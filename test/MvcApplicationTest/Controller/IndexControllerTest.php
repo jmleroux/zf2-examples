@@ -30,7 +30,7 @@ class IndexControllerTest extends AbstractHttpControllerTestCase
     {
         $this->dispatch('/');
         $response = $this->getResponse();
-        $this->assertContains('<h1>Welcome to <span class="zf-green">Zend Framework 2</span></h1>', $response->getContent());
+        $this->assertContains('<h1>Welcome to <span class="zf-green">ZF2 examples</span>', $response->getContent());
         $this->assertNotContains('unknown text', $response->getContent());
     }
 }
